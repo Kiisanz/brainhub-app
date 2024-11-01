@@ -85,10 +85,33 @@
 </div>
 <div class="w-[30%]">
       <aside class="w-[full] p-4 bg-white">
-            <h1 class="text-xl font-bold text-zinc-800 text-start px-3">My Activity</h1>
+            <h1 class="text-xl font-bold text-zinc-800 text-start">My Activity</h1>
             <div class="flex flex-col justify-center items-center">
-            <div class="bg-white rounded-xl border border-dark-alt">
-                  Tes
+            <div class="bg-white w-full">
+                  <h1>Latest session</h1>
+                  <div class="flex items-center gap-2 p-3 rounded-xl bg-white shadow border border-dark-alt mb-2">
+                        <div class="rounded-full bg-primary p-3 text-white">
+                              <Icon icon="simple-icons:task" width="1.7rem" height="1.7rem" />
+                        </div>
+                        <div class="flex flex-col leading-none">
+                              <h1 class="text-lg font-semibold">
+                                    Your Task Session
+                              </h1>
+                              <p class="text-xs">2 hours left</p>
+                        </div>
+                  </div>
+                  <div class="flex items-center gap-2 p-3 rounded-xl bg-white shadow border border-dark-alt mb-2">
+                        <div class="rounded-full bg-primary p-3 text-white">
+                              <Icon icon="simple-icons:task" width="1.7rem" height="1.7rem" />
+                        </div>
+                        <div class="flex flex-col leading-none">
+                              <h1 class="text-lg font-semibold">
+                                    Your Task Session
+                              </h1>
+                              <p class="text-xs">2 hours left</p>
+                        </div>
+                  </div>
+                  
             </div>
             <div id="calendar"></div>
       </div>

@@ -56,7 +56,7 @@
           <ul class="py-3 mt-4">
               {#each NavItem as Item}
                   <li>
-                        <a href="{Item.path}" class="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-primary w-full text-start text-zinc-600 hover:text-white transition-all duration-300 ease-in-out mb-2 {currentPath === Item.path ? 'bg-primary text-white' : ''}">
+                        <a href="{Item.path}" class="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-primary w-full text-start hover:text-white transition-all duration-300 ease-in-out mb-2 {currentPath === Item.path ? 'bg-primary text-red-100' : 'text-zinc-600'}">
                               <Icon icon={Item.icon} width="1.2rem" height="1.2rem" />
                               <p class="text-lg font-semibold">{Item.label}</p>
                           </a>                          

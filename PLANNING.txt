@@ -1,0 +1,55 @@
+
+
+ 1. Sesi Kolaboratif (Collaborative Session)
+   - Fitur: Membuat sesi kerja kolaboratif di mana beberapa pengguna bisa bergabung dan bekerja sama untuk menyelesaikan soal atau tugas.
+   - Detail: Sesi ini dapat dibuat oleh satu pengguna (misalnya seorang siswa atau guru), kemudian tautan atau kode undangan dibagikan ke pengguna lain untuk bergabung. Setiap sesi memiliki ID unik, dan semua perubahan (seperti jawaban atau diskusi) diperbarui secara real-time untuk semua pengguna yang terhubung.
+
+ 2. Pengeditan Real-time (Real-time Editing)
+   - Fitur: Setiap pengguna dapat mengedit atau memberikan jawaban secara langsung, dan perubahan akan terlihat oleh seluruh anggota sesi secara real-time.
+   - Detail: Ketika seorang siswa mengubah jawaban, pengguna lain dapat melihat perubahan tersebut secara langsung tanpa harus memuat ulang halaman. Fitur ini membutuhkan integrasi WebSocket untuk komunikasi real-time.
+
+ 3. Pembagian Tugas (Task Delegation)
+   - Fitur: Pembagian tugas antar pengguna yang berpartisipasi, di mana setiap anggota dapat ditugaskan untuk mengerjakan soal-soal tertentu.
+   - Detail: Setiap soal atau bagian dari tugas dapat diambil alih oleh pengguna tertentu (misalnya, berdasarkan kesepakatan tim atau diatur oleh guru). API ini mendukung pembagian soal ke individu atau sub-kelompok dalam sesi.
+
+ 4. Fitur Diskusi dan Chat (Discussion & Chat)
+   - Fitur: Tersedia ruang diskusi atau chat bagi para pengguna yang bekerja bersama untuk bertukar ide, menjelaskan konsep, atau meminta bantuan.
+   - Detail: Chat ini bisa berupa text-based dengan dukungan markdown untuk format, atau juga dapat mendukung file attachment jika pengguna perlu berbagi gambar, diagram, atau catatan lainnya. Selain itu, ada fitur mention untuk memanggil anggota tim lain ke dalam percakapan tertentu.
+
+ 5. History dan Versi (Versioning & History Tracking)
+   - Fitur: Melacak setiap perubahan yang dilakukan dalam pengerjaan soal dan memungkinkan pengguna untuk melihat riwayat perubahan.
+   - Detail: API ini memungkinkan pengguna melihat siapa yang mengubah bagian tertentu dari soal, kapan perubahan itu dilakukan, dan memungkinkan mereka untuk kembali ke versi sebelumnya jika diperlukan. Ini penting untuk memastikan kualitas kolaborasi dan menghindari konflik saat mengerjakan soal bersama.
+
+ 6. Komentar pada Soal (Task Commenting)
+   - Fitur: Pengguna dapat memberikan komentar atau catatan pada setiap soal.
+   - Detail: Fitur ini memungkinkan siswa menambahkan catatan atau pertanyaan terkait pada soal tertentu. Misalnya, jika ada soal yang sulit, siswa dapat memberikan komentar untuk mendiskusikan solusi atau meminta penjelasan dari pengguna lain.
+
+ 7. Notifikasi Real-time (Real-time Notifications)
+   - Fitur: Memberikan notifikasi secara langsung kepada pengguna jika ada perubahan atau interaksi baru dalam sesi kolaborasi.
+   - Detail: Notifikasi ini muncul ketika ada anggota baru yang bergabung, ketika seseorang memberikan jawaban atau komentar baru, atau ketika ada diskusi yang penting. Ini membantu menjaga pengguna tetap terinformasi dan terlibat dalam sesi kolaborasi.
+
+ 8. Penilaian Bersama (Collaborative Grading)
+   - Fitur: Pengguna dapat memberikan nilai sementara atau penilaian terhadap jawaban yang diberikan oleh anggota lain sebelum menyelesaikan tugas secara keseluruhan.
+   - Detail: Anggota kelompok bisa saling menilai pekerjaan satu sama lain, memberikan feedback atau penilaian awal pada jawaban sebelum diserahkan ke guru atau pengajar. API ini memungkinkan fleksibilitas dalam penilaian antar anggota kelompok.
+
+ 9. Penguncian Jawaban (Answer Locking)
+   - Fitur: Menyediakan fitur untuk mengunci jawaban setelah dianggap final oleh pengguna yang memiliki hak akses tertentu.
+   - Detail: Setelah jawaban dianggap benar atau telah disepakati oleh tim, seorang pengguna (misalnya, ketua kelompok atau moderator) dapat mengunci jawaban tersebut agar tidak dapat diubah oleh anggota lain. Ini mencegah kesalahan atau perubahan yang tidak diinginkan setelah jawaban dikonfirmasi.
+
+ 10. Integrasi dengan Sistem Penilaian Otomatis (Automatic Grading Integration)
+   - Fitur: API mendukung integrasi dengan sistem penilaian otomatis untuk soal-soal pilihan ganda atau soal yang bisa dinilai secara otomatis.
+   - Detail: Setelah jawaban selesai dikerjakan secara kolaboratif, API dapat secara otomatis memberikan nilai pada soal yang mendukung penilaian otomatis (seperti soal pilihan ganda atau jawaban numerik) dan memberikan laporan hasil kolaborasi kepada seluruh anggota.
+
+ 11. Laporan Progress dan Kinerja (Progress & Performance Report)
+   - Fitur: Memberikan laporan mengenai progress pengerjaan soal secara keseluruhan, termasuk kinerja tiap anggota tim.
+   - Detail: API ini dapat menampilkan statistik seperti jumlah soal yang telah dikerjakan, waktu yang dihabiskan oleh tiap anggota, dan kontribusi individu. Ini berguna untuk mengevaluasi seberapa aktif setiap anggota dalam kolaborasi.
+
+ 12. Hak Akses dan Izin (Access Control & Permissions)
+   - Fitur: Mengatur hak akses untuk setiap pengguna dalam sesi kolaboratif, seperti siapa yang bisa mengedit soal, memberikan komentar, atau mengunci jawaban.
+   - Detail: Guru atau moderator dapat memberikan hak akses berbeda kepada anggota sesi. Misalnya, beberapa siswa hanya bisa membaca, sementara yang lain bisa mengedit atau memberikan jawaban. Ini juga mencakup kemampuan untuk mengundang pengguna baru ke dalam sesi.
+
+ Contoh Penggunaan:
+- Skenario Pembelajaran Kelompok: Siswa dalam satu kelompok bisa mengerjakan soal matematika atau fisika secara bersama-sama, di mana satu siswa menulis jawaban sementara yang lain memberikan masukan atau diskusi lewat fitur chat. Setelah semua setuju dengan jawabannya, jawaban dikunci oleh ketua kelompok.
+- Diskusi dan Kolaborasi Jarak Jauh: Siswa di berbagai lokasi bisa bergabung dalam satu sesi untuk memecahkan soal-soal dengan interaksi real-time, berdiskusi, dan memberikan solusi yang disepakati bersama.
+
+Dengan fitur-fitur tersebut, API ini dapat mendukung pembelajaran kolaboratif yang interaktif, efisien, dan memberikan pengalaman belajar yang lebih dinamis dan fleksibel.
